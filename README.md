@@ -1,13 +1,15 @@
 ## Interesting Codes
 This is an open source project to help begiiners to start programming and create interest for programmings among kids. 
 This repo will be a reference guide  for exploring various programming language syntax and to learn
-code for making computer science education better for children.
+code for making computer science education better for children. We will be happy if you add some good codes to help our community
+and make next generation coding ninjas.
 # How To Contribute to This Project
 Here ia a quick and painless steps to contribute to this project:
 
 * Add your code in any language, under specific directories.
-* Highly appreciable if you add some playing codes/small games or puzzle or anything similar (eg. Tower of Hanoi problem) and also
-* not to forget to add a 'description.md' file with a few lines under the specific directory.
+* Code level-any level from 'Hello world' to Anything.
+* Highly appreciable if you add some playing codes/small games or puzzle or anything similar (eg. Tower of Hanoi problem) 
+*  Also not to forget to add a 'description.md' file with a few lines under the specific directory.
 To do so, first create an issue with the task you are doing, for example: "Issue - creating a tic-tac game". 
 Add the `HacktoberFest` label in the issue and assign the issue to yourself. Create a pull request in response
 to that issue and finally submit it for review.
