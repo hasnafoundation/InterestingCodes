@@ -1,5 +1,5 @@
 ## Interesting Codes
-This is an open source project to help begiiners to start programming and create interest for programmings among kids. 
+This is an open source project to help beginners to start programming and create interest for programmings among kids. 
 This repo will be a reference guide  for exploring various programming language syntax and to learn
 code for making computer science education better for children. We will be happy if you add some good codes to help our community
 and make next generation coding ninjas.
