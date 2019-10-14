@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angular | Word Game</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="process.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body ng-app="GameApp" ng-controller = "GameController">
+ <div class="container">
+        <div class="progress" style="height: 1px;">
+                <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow={{guesses}} aria-valuemin="0" aria-valuemax="6"></div>
+              </div>
+              <div class="progress" style="height: 20px;">
+                <div class="progress-bar" role="progressbar" style="width:{{guesses}} "; aria-valuenow={{guesses}} aria-valuemin="0" aria-valuemax="6"></div>
+              </div>
+     <div>Guesses left ::{{guesses}}</div>
+     <div>
+         Your Incorrect guesses :: <span ng-repeat="letter in incletterschosen">
+             {{letter}}
+         </span>
+     </div>
+     <div>
+         Your correct guesses :: <span ng-repeat="letter in corletterschosen">
+                {{letter}}
+            </span>
+     </div>
+     <div>
+         Guess the fruit ::{{displayword}}
+     </div>
+     <div>
+         <div>
+            <!--<input type="text" name="guess" ng-model="input.letter">--> 
+             <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-default">Enter letter</span>
+                </div>
+                <input type="text" name="guess" ng-model="input.letter" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+              </div>
+             <button  class="btn btn-success" ng-click="letterchosen()">Check</button>
+         </div>
+     </div>
+ </div>
+</body>
+</html>
