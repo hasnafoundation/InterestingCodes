@@ -51,7 +51,7 @@ to that issue and finally submit it for review.
 
 
 
-Don't forget to include the comments as seen above. Feel free to include additional information about the language you chose in your comments too! Like a link to a helpful introduction or tutorial.
+Don't forget to include the comments as seen above. Feel free to include additional information about the language you choose in your comments too! Like a link to a helpful introduction or tutorial.
 
 ## Reference Links
 
