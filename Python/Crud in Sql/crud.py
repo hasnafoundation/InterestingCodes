@@ -1,5 +1,5 @@
 import mysql.connector
-
+  
 class crud:
     def __init(self, host, userName, passwd):
         self.host = host,
