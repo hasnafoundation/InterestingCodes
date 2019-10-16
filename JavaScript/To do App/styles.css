@@ -1,0 +1,290 @@
+:root {
+    --dark: #303941;
+    --light: #f2f5fa;
+    --light-gray: #c1d2ec;
+    --primary: #2c3e50;
+    --danger: #c0392b;
+    --success: #2ecc71;
+}
+
+/* Reset */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--dark);
+}
+
+/* Form Controls */
+
+button,
+input {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding: .3rem .5rem;
+    border-radius: .2rem;
+    color: var(--dark);
+    outline: none;
+}
+
+button {
+    border: 1px solid var(--primary);
+    background-color: var(--primary);
+    color: #fff;
+    box-shadow: inset 0 -1px 3px -2px var(--dark);
+    cursor: pointer;
+}
+
+button:focus {
+    box-shadow:
+        inset 0 -1px 3px -2px var(--dark),
+        0 0 0 3px rgba(0, 139, 186, 0.4);
+
+}
+
+button.danger {
+    border: 1px solid var(--danger);
+    background-color: var(--danger);
+}
+
+button.danger:focus {
+    box-shadow:
+        inset 0 -1px 3px -2px var(--dark),
+        0 0 0 3px rgba(186, 59, 0, 0.4);
+}
+
+button.success {
+    border: 1px solid var(--success);
+    background-color: var(--success);
+}
+
+button.success:focus {
+    box-shadow:
+        inset 0 -1px 3px -2px var(--dark),
+        0 0 0 3px rgba(53, 186, 0, 0.4);
+}
+
+input {
+    border: 1px solid var(--primary);
+}
+
+input:focus {
+    z-index: 1;
+    box-shadow:
+        inset 0 1px 3px -2px var(--dark),
+        0 0 0 3px rgba(0, 139, 186, 0.3);
+}
+
+/* Top Bar */
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: .5rem 0;
+    background-color: var(--primary);
+}
+
+.top-bar h1 {
+    margin: 0;
+    font-size: 20px;
+    color: #fff;
+}
+
+/* Wrapper */
+
+.wrapper {
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        flex-direction: row;
+        height: 100vh;
+        padding: 2rem;
+        padding-top: 4rem;
+    }
+}
+
+/* Controls */
+
+.controls {
+    flex: none;
+    padding: 1rem;
+    padding-top: 4rem;
+    background-color: var(--light);
+}
+
+@media (min-width: 768px) {
+    .controls {
+        padding: 0;
+        padding-top: 33px;
+        margin-right: 1rem;
+        background-color: unset;
+    }
+}
+
+/* Control Group */
+
+.control-group {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: .5rem;
+}
+
+.control-group-buttons {
+    flex: none;
+    width: 100px;
+    margin-right: .5rem;
+}
+
+.control-group-buttons button {
+    width: 100%;
+    height: 40px;
+}
+
+.control-group-inputs {
+    flex: 1;
+    flex-direction: column;
+    display: flex;
+}
+
+.control-group-inputs input {
+    width: 100%;
+    margin-bottom: .5rem;
+    height: 50px;
+}
+
+.control-group-inputs input:last-child {
+    margin-bottom: 0;
+}
+
+/* Todos Container */
+
+.todos-container {
+    flex: 1;
+    flex-direction: column;
+    display: flex;
+    background-color: var(--primary);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.todos-container h2 {
+    position: relative;
+    margin: 0;
+    text-align: center;
+    font-size: 15px;
+    padding: .5rem 0;
+    box-shadow: 0 2px 3px -3px var(--dark);
+    color: #fff;
+}
+
+.todos-container ul {
+    flex-direction: column;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+}
+
+.todos-container ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .2rem .75rem;
+    position: relative;
+}
+
+.todos-container ul li:first-child {
+    margin-top: .5rem;
+}
+
+.todos-container ul li:nth-child(odd) {
+    background-color: var(--light);
+}
+
+.todos-container ul li span {
+    margin-right: auto;
+}
+
+.todos-container ul li button {
+    margin-left: .25rem;
+}
+
+/* Todos checkbox */
+
+.todos-container label {
+    padding-left: 1.4rem;
+}
+
+.todos-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.todo-checkmark {
+    position: absolute;
+    top: 6px;
+    left: 5px;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border: 1px solid rgb(226, 226, 226);
+}
+
+.todos-container label:hover input~.todo-checkmark {
+    border: 1px solid #ccc;
+}
+
+.todos-container label input:checked~.todo-checkmark {
+    background-color: var(--success);
+}
+
+.todo-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.todos-container label input:checked~.todo-checkmark:after {
+    display: block;
+}
+
+.todos-container label .todo-checkmark:after {
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.todo-completed {
+    text-decoration: line-through;
+}
+
+/* Button ICON */
+.btn-icon {
+    float: left;
+    clear: both;
+}
