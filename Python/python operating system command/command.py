@@ -1,6 +1,6 @@
 import os
 from datetime import datetime
-
+  
 def os_name():
     print(os.uname())
 
