@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To do List</title>
+    <link rel="icon" sizes="192x192" href="icon.png">
+    <!-- font awesome icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+        integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="top-bar">
+       </span><h1>To-Do</h1>
+    </div>
+
+    <div class="wrapper">
+
+        <div class="controls">
+            <div class="control-group add-item">
+                <div class="control-group-buttons">
+                    <button id="btn_add_todo" onclick="handler.addTodos()"><span
+                            class="fas btn-icon fa-plus-square"></span> Add</button>
+                </div>
+                <div class="control-group-inputs">
+                    <input class="effect" type="text" id="todoAddTextInput" placeholder="New Item">
+                </div>
+            </div>
+
+            <div class="control-group rename-item">
+                <div class="control-group-buttons">
+                    <button id="btn_change_todo" onclick="handler.changeTodos()"><span
+                            class="fas btn-icon fa-sync"></span> Change</button>
+                </div>
+                <div class="control-group-inputs">
+                    <input class="effect" type="number" id="todoChangePositionInput" placeholder="Item Index">
+                    <input class="effect" type="text" id="todoChangeNameInput" placeholder="New Item Name">
+                </div>
+            </div>
+
+            <div class="control-group delete-item">
+                <div class="control-group-buttons">
+                    <button id="btn_delete_todo" onclick="handler.deleteTodos()" class="danger"><span
+                            class="fas btn-icon fa-trash"></span> Delete</button>
+                </div>
+                <div class="control-group-inputs">
+                    <input class="effect" type="number" id="todoDeletePositionInput" placeholder="Item Index">
+                </div>
+            </div>
+
+            <div class="control-group toggle-item">
+                <div class="control-group-buttons">
+                    <button id="btn_toggle_completed" onclick="handler.toggleCompleted()" class="success"><span
+                            class="fas btn-icon fa-toggle-off"></span> Toggle</button>
+                </div>
+                <div class="control-group-inputs">
+                    <input class="effect" type="number" id="todoTogglePositionInput" placeholder="Item Index">
+                </div>
+            </div>
+
+            <div class="control-group toggle-all-items">
+                <div class="control-group-buttons">
+                    <button id="btn_toggle_all" onclick="handler.toggleAll()" class="success"><span
+                            class="fas btn-icon fa-toggle-on"></span> Toggle All</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="todos-container">
+            <h2>Open Tasks</h2>
+            <ul></ul>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="todos.js"></script>
+</body>
+
+</html>
