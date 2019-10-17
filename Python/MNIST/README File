@@ -1,1 +1,3 @@
 This code performs classification using SKLEARN implementation of Logistic Regression. The code also includes ROC curve coded from scratch.
+
+Users are advised to convert the missing files to a numpy array. (The files could not be uploaded here due to size restrictions)
