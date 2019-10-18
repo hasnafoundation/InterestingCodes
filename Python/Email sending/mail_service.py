@@ -1,13 +1,12 @@
 
 PROXY_MAIL = "set your email name"
-MAIL_PASSWORD = "google account password - not gmail password."
+PASSWORD = "google account password - not gmail password."
 """
  Note: You will need to setup an application-specific password:
             https://support.google.com/mail/?p=InvalidSecondFactor
             https://security.google.com/settings/security/apppasswords
 
 """
-
 
 import gmail
 
@@ -29,7 +28,8 @@ class MailService:
         print("Calling send_email with params [subject = {}, recipient = {}, content = {}]".\
                      format(subject, recipient, content))
         new_message = gmail.Message(subject, to=recipient, text=content)
-        status = self._api.send(new_message)
-        print("Email sending finished with status = {}".format("success" if status_code == SUCCESS else "fail"))
+        status_code = self._api.send(new_message)
+        status = "success" if status_code is None else "fail"
+        print("Email sending finished with status = {}".format(status))
 
         #mostly, errors are caused by smtp
